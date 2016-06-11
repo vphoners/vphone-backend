@@ -1,0 +1,13 @@
+wordpress:
+  image: vphone-wordpress
+  links:
+    - db:mysql
+  ports:
+    - 8080:80
+
+db:
+  image: mariadb
+  environment:
+    - MYSQL_ROOT_PASSWORD=M9MxUGoeQHBk
+  volumes:
+    - mysql_data:/var/lib/mysql
