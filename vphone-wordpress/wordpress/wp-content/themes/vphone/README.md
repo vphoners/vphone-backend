@@ -1,45 +1,164 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+Start talking: [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/holger1411/understrap?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
-_s
-===
+## About
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework?
+That’s what UnderStrap is. 
+You can use it as starter theme and build your own theme on top of it. Or you use it as parent theme and create your own child theme for UnderStrap.
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+At the moment, UnderStrap is in a very early stage. But if you wan’t, feel free to use it for your own WordPress theme!
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A custom header implementation in `inc/custom-header.php` just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/extras.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+# UnderStrap WordPress Theme Framework
 
-Getting Started
----------------
+Website: [http://understrap.com](http://understrap.com)
 
-If you want to keep it simple, head over to http://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+Child Theme Project: [https://github.com/holger1411/understrap-child](https://github.com/holger1411/understrap-child)
 
-If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium`), and then you'll need to do a five-step find and replace on the name in all the templates.
+## License
+UnderStrap is released under the terms of the GPL version 2 or (at your option) any later version.
 
-1. Search for `'_s'` (inside single quotations) to capture the text domain.
-2. Search for `_s_` to capture all the function names.
-3. Search for `Text Domain: _s` in style.css.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
-5. Search for `_s-` to capture prefixed handles.
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
-OR
+## Changelog
 
-* Search for: `'_s'` and replace with: `'megatherium'`
-* Search for: `_s_` and replace with: `megatherium_`
-* Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium` in style.css.
-* Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium</code>
-* Search for: `_s-` and replace with: `megatherium-`
+            - **0.4.0 Apr. 29th 2016 **
+                   - Switching from Bootstrap 3 to Bootstrap 4
+                   - Adding BrowserSync to gulpfile (again thx to @dvlopes)
+                   - Preparing the navbar markup so that the current version will work with Bootstrap 3 AND 4
+                   - Adding "gulp scripts" command - This uglifies and minifies all JS files (except jQuery...) into one single JS file called theme.min.js
+                   - Updating Gulpfile - now "gulp copy-assets" command copies all files from dependency folders into mid-layer folder called "/src"
+                   - Load jQuery again as extra script instead of concat it into on single file. After some problems with WooCommerce and other plugins
+                   - Checking WordPress 4.5 compatibility
+                   - Updating language template
+                   - Adding Brazilian Portuguese (pt-BR) translation (thx to @dvlopes).
 
-Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.
+            - **0.3.8 Mar. 9th 2016 **
+                   - Adding footer widget area
+                   - Adjust Bootstrap markup for searchform and search widget
 
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
-Good luck!
+            - **0.3.7 Jan. 8th 2016**
+                   - Cleanup for submitting to WordPress.org theme repository:
+                        - Fixing sticky post problem
+                        - Fixing skip-to-content link
+                        - re-activating the admin bar
+                        - adding readme.txt
+                        - Fixing missing translation strings in comments template
+
+
+            - **0.3.6 Jan. 4th 2016**
+                   - Cleanup
+                   - Updating dependencies
+                   - Upgrade to Bootstrap 3.3.6 and Font Awesome 4.5.0
+
+
+            - **0.3.4 SEP. 9th 2015**
+                   - Adding basic WooCommerce support
+                   - Cleanup for submitting to wordpress.org
+                   - Removing _s SASS ... no need for basic styling. Thats Bootstrap´s job.
+
+
+            - **0.3.1 AUG. 12th 2015**
+                   - Adding bower dependency manager and replacing GRUNT taskrunner with GULP
+
+            - **0.3.0 Mar. 23th 2015**
+                   - Streamlining some code, adding extra "sticky" area (sticky posts above the main content area inside an extra loop). Fixing some child theme issues (now its really child theme ready...really...trust me...)
+
+            - **0.2.9 Mar. 10th 2015**
+                   - Adding a new theme customizer option. It lets you add a code snippet right before the closing </body> tag.
+                   For example for Google Analytics, Google Tag Mananger, Pingdom etc. Just copy and past your code to the input field and save the setting.
+                   So you don´t have to edit the theme source file´s directly and your theme stay´s updateable
+
+            - **0.2.8 Feb. 6th 2015**
+                   - Adding Grunt and Grunt SASS task
+
+
+            - **0.2.7 Jan. 26th 2015**
+                   - Adding some basic theme option for the build-in slider script
+
+            - **0.2.6 Dec. 28th 2014**
+                    - CLean up
+
+
+            - **0.2 Dec. 22th 2014**
+                    - Adding Jasny Off-Canvas nav and Owl.Carousel Slider script
+                    - Enqueue scipts and styled dynamically
+
+            - **0.1 Dec. 10th 2014 - First commit**
+
+
+## Basic Features
+
+- Combines Underscore’s PHP/JS files and Bootstrap’s HTML/CSS/JS.
+- Comes with Bootstrap (v3.3.6) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
+- Uses a single and minified CSS file for all the basic stuff.
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.5.0)
+- Comes with extra slider script by [Owl Carousel](http://www.owlcarousel.owlgraphic.com/) (v2.0.0-beta.2.4)
+- Simple RTL file.
+- Jetpack ready.
+- WooCommerce support.
+- [Child Theme](https://github.com/holger1411/understrap-child) ready.
+- Translation ready.
+
+## Starter Theme + HTML Framework = WordPress Theme Framework
+
+The _s theme is a good starting point to develop a WordPress theme. But it is “just” a raw starter theme. That means it outputs all the WordPress stuff correctly but without any layout or design.
+Why not add a well known and supported layout framework to have a solid, clean and responsive foundation? That’s where Bootstrap comes in.
+
+## Confused by All the CSS and Sass Files?
+
+Some basics about the Sass and CSS files that come with UnderStrap:
+- The theme itself uses the `/style.css`file just to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
+- The `/css/theme.css` file provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
+
+                  - 1 "theme/theme_variables";  // <--------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
+                  - 2 "../src/bootstrap-sass/assets/stylesheets/bootstrap";  // <--------- All the Bootstrap stuff - Don´t edit this!
+                  - 3 "understrap/understrap"; // <--------- Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
+                  - 4 "../src/fontawesome/scss/font-awesome"; // <--------- Font Awesome Icon styles
+
+                  // Any additional imported files //
+                  - 5 "theme/theme";  // <--------- Add your styles into this file
+
+- Don’t edit the files no. 2-4 files/filesets or you won’t be able to update it without overwriting your own work!
+- Your design goes into: `/sass/theme`. Add your styles to the `/sass/theme/_theme.scss` file and your variables to the `/sass/theme/_theme_variables.scss`. Or add other .scss files into it and `@import` it into `/sass/theme/_theme.scss`.
+
+## Installation
+
+- Download the understrap folder from GitHub or from understrap.com
+- IMPORTANT: If you download it from GitHub make sure you rename the "understrap-master.zip" file just to "understrap.zip" or you might have problems using child themes !!
+- Upload it into your WordPress installation subfolder here: `/wp-content/themes/`
+- Login to your WordPress backend
+- Go to Appearance → Themes
+- Activate the UnderStrap theme
+
+## Developing With NPM, Bower, Gulp and SASS and [Browser Sync][1]
+
+### Installing Dependencies
+- Make sure you have installed Node.js, Bower, and Browser-Sync on your computer globally
+- Then open your terminal and browse to the location of your UnderStrap copy
+- Run: `$ npm install` then: `$ bower install` and finally: `$ gulp copy-assets`
+
+### Running
+To work and compile your Sass files on the fly start:
+
+- `$ gulp watch`
+
+Or, to run with Browser-Sync:
+
+- First change the browser-sync options to reflect your environment in the file `/gulpfile.js` in the beginning of the file:
+```javascript
+var browserSyncOptions = {
+    proxy: "localhost/theme_test/", // <----- CHANGE HERE
+    notify: false
+};
+```
+- then run: `$ gulp watch-bs`
+
+## How to Use the Build-In Widget Slider
+
+The front-page slider is widget driven. Simply add more than one widget to widget position “Hero”.
+- Click on Appearance → Widgets.
+- Add two, or more, widgets of any kind to widget area “Hero”.
+- That’s it.
+
+[1] Visit [http://browsersync.io](http://browsersync.io) for more information on Browser Sync

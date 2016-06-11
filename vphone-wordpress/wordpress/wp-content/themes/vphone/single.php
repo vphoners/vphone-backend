@@ -2,34 +2,45 @@
 /**
  * The template for displaying all single posts.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package vphone
+ * @package understrap
  */
 
 get_header(); ?>
+<div class="wrapper" id="single-wrapper">
+    
+    <div  id="content" class="container">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+        <div class="row">
+        
+            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
+                
+                <main id="main" class="site-main" role="main">
 
-		<?php
-		while ( have_posts() ) : the_post();
+                    <?php while ( have_posts() ) : the_post(); ?>
 
-			get_template_part( 'template-parts/content', get_post_format() );
+                        <?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-			the_post_navigation();
+                        <?php understrap_post_nav(); ?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+                        <?php
+                        // If comments are open or we have at least one comment, load up the comment template
+                        if ( comments_open() || get_comments_number() ) :
+                            comments_template();
+                        endif;
+                        ?>
+                        
+                    <?php endwhile; // end of the loop. ?>
 
-		endwhile; // End of the loop.
-		?>
+                </main><!-- #main -->
+                
+            </div><!-- #primary -->
+        
+        <?php get_template_part('sidebar'); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+        </div><!-- .row -->
+        
+    </div><!-- Container end -->
+    
+</div><!-- Wrapper end -->
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>
