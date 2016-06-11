@@ -4679,6 +4679,11 @@ a.skip-link {
   .dropdown-menu .menu-item a:hover {
     background-color: #895cd1; }
 
+.site-info {
+  text-align: center;
+  color: #818a91;
+  font-size: 12px; }
+
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -4694,7 +4699,7 @@ a.skip-link {
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;

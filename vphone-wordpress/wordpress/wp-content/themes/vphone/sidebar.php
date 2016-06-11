@@ -13,5 +13,5 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <div id="secondary" class="col-md-4 widget-area" role="complementary">
 
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	
+
 </div><!-- #secondary -->

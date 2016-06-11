@@ -72,7 +72,7 @@ right: 0px;
 	margin-bottom:0px;
 }
 
-//Bootstrap3 to Bootstrap4 "translation" 
+//Bootstrap3 to Bootstrap4 "translation"
 .menu-item {float:left; width:auto; display:inline;}
 //ul.nav.navbar-nav a {
 //	display: block;
@@ -181,3 +181,9 @@ right: 0px;
       background-color:$brand-primary;
     }
   }
+
+.site-info {
+  text-align: center;
+  color: $gray-light;
+  font-size: 12px;
+}
