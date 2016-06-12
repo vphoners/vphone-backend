@@ -2,6 +2,7 @@ wordpress:
   image: vphone-wordpress
   links:
     - db:mysql
+    - history
   ports:
     - 8080:80
 
@@ -11,3 +12,13 @@ db:
     - MYSQL_ROOT_PASSWORD=M9MxUGoeQHBk
   volumes:
     - mysql_data:/var/lib/mysql
+
+history:
+  image: vphone-history
+  links:
+    - redis
+
+redis:
+  image: redis:3
+  volumes:
+    - redis_data:/data
