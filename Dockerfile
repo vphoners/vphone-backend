@@ -1,8 +1,6 @@
-FROM ubuntu:xenial
+FROM alpine:3.1
 
-RUN apt-get update -y && \
-    apt-get install -y asterisk nano
-
+RUN apk add --update asterisk
 ADD ./etc /etc
 
 ADD ./entrypoint.sh /
