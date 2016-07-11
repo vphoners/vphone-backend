@@ -1,6 +1,6 @@
 FROM debian:experimental
 
-RUN apt-get update && apt-get install -y asterisk
+RUN apt-get update && apt-get install -y asterisk nano less
 ADD ./etc /etc
 
 ADD ./entrypoint.sh /
