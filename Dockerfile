@@ -1,6 +1,6 @@
-FROM alpine:3.4
+FROM debian:experimental
 
-RUN apk add --update asterisk
+RUN apt-get update && apt-get install -y asterisk
 ADD ./etc /etc
 
 ADD ./entrypoint.sh /
