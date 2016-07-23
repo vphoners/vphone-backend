@@ -1,0 +1,3 @@
+assert(loadfile("/etc/asterisk/add_extension.lua"))()
+
+add_extension("46738966872")

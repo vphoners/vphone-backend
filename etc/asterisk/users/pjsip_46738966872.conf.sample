@@ -1,0 +1,21 @@
+[46738966872]
+type=endpoint
+transport=transport-udp-nat
+context=from-46738966872
+disallow=all
+allow=ulaw
+direct_media=yes
+auth=46738966872
+aors=46738966872
+force_rport=yes
+rewrite_contact=yes
+
+[46738966872]
+type=auth
+auth_type=userpass
+password=yoursecret
+username=mohsen
+
+[46738966872]
+type=aor
+max_contacts = 1

@@ -1,0 +1,4 @@
+run.sh
+etc/asterisk/users/*.conf
+etc/asterisk/extensions.lua
+etc/asterisk/sip_users.conf
